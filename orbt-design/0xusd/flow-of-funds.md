@@ -1,0 +1,5 @@
+# Flow of Funds
+
+* Stablecoin → 0xUSD (issuance path): User sends stable S → UCE retains reserveBps% on-hand; forwards the remainder to the selected pocket (allocator’s pocket if caller/referral maps; else global). Outbound 0xUSD: spend on-hand → allocator reservedOx (if allocator/referral) → unreserved on-hand → if still short, mint 0xUSD shortfall to the receiver. No redemption rate or debt scaling applies here.
+* 0xUSD → Stablecoin (redemption path): User sends 0xUSD → UCE burns it. Outbound S: spend on-hand reserves (decrement per-asset on-hand trackers) → pull remainder from appropriate pocket (allowance-bound) → transfer to user at oracle quote. Then: UCE updates the redemption rate and may scale allocator debts (pro-rata via the global debt index). User payout is not haircut by the redemption rate.
+* s0xUSD wrapper: Deposit 0xUSD to receive shares; redeem shares for 0xUSD. The wrapper does not change peg logic or redemption-rate semantics; it only routes 0xUSD yield.
