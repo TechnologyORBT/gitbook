@@ -11,7 +11,7 @@ coverY: 0
 
 ORBT is a Unified Liquidity Layer and modular stablecoin architecture that mints 1:1 0xAssets (0xUSD, 0xBTC, 0xETH), routes excess reserves into pre-funded, intent-based settlements, and streams fee-backed yield back to s0xAsset holders.
 
-<a href="./" class="button primary">Read the Overview</a> <a href="./#what-is-orbt" class="button secondary">Read How ORBT Works</a>
+<a href="https://app.gitbook.com/s/qd6RXzZakAKKlptImF4e/introduction/readme" class="button primary">Read the Overview</a> <a href="https://app.gitbook.com/s/qd6RXzZakAKKlptImF4e/introduction/how-orbt-works" class="button secondary">Read How ORBT Works</a>
 {% endcolumn %}
 
 {% column width="50%" %}
